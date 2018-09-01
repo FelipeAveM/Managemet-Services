@@ -1,5 +1,0 @@
-Management Services
-
-Descipción:
-
-Este software se creará con la intención de gestionar de una manera mas ágil el proceso de solicitudes de mantenimientos tanto locativos como preventivos y correctivos.
