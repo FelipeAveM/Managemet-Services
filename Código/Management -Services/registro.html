@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <LINK href="css/style.css" rel="stylesheet" type="text/css">
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-default navbar-static-top" >
+
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button"class= "navbar-toggle collapsed" data-toggle= "collapse" data-target= "#navbar" aria-expanded= "false" aria-controls= "navbar">
+                            <span class="sr-only">Este boton despliega  la barra de navegacion al reducir la pantalla asi se hace responsive</span> 
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Management Services </a>
+
+                    </div>
+                    <div   id="navbar" class="navbar-collapse collapse">
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                    5
+                                </a>
+                            </li>
+
+                            <li>
+                                <a  href="index.html"> 
+                                    <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Iniciar sesion
+                                </a>
+                            </li>
+
+                            <li><a  href="registro.html">
+                                    <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> Registro
+                                </a>
+                            </li>   
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="jumbotron text-center">
+                    <h1 class="text-center">Ingreso De Usuarios Management</h1>
+                    <h4> Services </h4>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 text-center">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Instrucciones 
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <br>
+                            <p class="text-justify">
+                                <br>
+                                * Para unirte a la plataforma Management Services requerimos que introduzcas un nombre
+                                  de usuario,email corporativo y una contraseña.
+                                * Si tu cargo es Jefe De Tienda, debes seleccionar la tienda que se te fue asignada.
+                                * Si tu cargo es Tecnico o Supervisor, Debes seleccionar Todas las sedes
+                            </p>
+                            <br>
+                            <a href="index.html">¿Ya estas registrado?</a>
+                            <br>
+                            <a href="#">¿olvidaste tu contraseña?</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Introduce tus datos 
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form" method="post" action= "registro.php">
+
+                                <div class="form-group">
+                                    <label>Nombre Usuario</label>
+                                    <input type="text" class="form-control" name="nombre" placeholder="Nombre completo">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email </label>
+                                    <input type="email" class="form-control" name="correo" placeholder="usuario@tienda.com.co">
+                                </div>
+                                <div class="form-group">
+                                    <label>Contraseña</label>
+                                    <input type="password" class="form-control" name="password">
+                                </div>
+                                <div class="form-group">
+                                    <label> Sede </label>
+                                    <select class="form-control" name="sede" >
+                                        <option value="Todas las sedes" id="sede">Seleccione</option>
+                                        <option value="Todas las sedes">Todas las sedes</option>
+                                        <option value="Sede 1">Sede 1</option>
+                                        <option value="Sede 2">Sede 2</option>
+                                        <option value="Sede 3">Sede 3</option>
+                                        <option value="Sede 4">Sede 4</option>
+                                        <option value="Sede 5">Sede 5</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Perfil</label>
+                                    <select class="form-control" id="perfil" name="perfil">
+                                        <option value="-1" id="perfil">Seleccione</option>
+                                        <option value="Administrador">Administrador </option>
+                                        <option value="Técnico">Técnico</option>
+                                        <option value="Supervisor">Supervisor</option>
+                                        <option value="Jefe De Tienda">Jefe De Tienda</option>
+                                    </select>
+                                </div>
+                                <button type="reset" class="btn btn-default btn-primary">Limpiar</button> <br><br>
+                                <button type="submit"class="btn btn-default btn-primary" name="enviar">Enviar Datos</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h6>Copyright &copy; 2018 - Management Services</h6>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <h6>Navigation </h6>
+                        <ul class="unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="registro.html">Registro</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 text-right">
+                        <h6>Follow Us </h6>
+                        <ul class="unstyled">
+                            <li><a href="https://www.facebook.com/">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/">Instagram</a></li>
+                            <li><a href="https://www.twitter.com/">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </footer>
+
+    </body>
+</html>
