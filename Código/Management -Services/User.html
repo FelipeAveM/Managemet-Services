@@ -1,9 +1,36 @@
-<!DOCTYPE html>
+
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
+
+<
 -->
+<?php
+$servername = "127.0.0.1";
+$username = "root";
+$password = "";
+$dbname = "practica_aplicada";
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT ruta_foto FROM usuario limit 1";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $rutaFoto= $row["ruta_foto"];
+    }
+} else {
+    echo "0 results";
+}
+
+$conn->close();
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -14,7 +41,9 @@ and open the template in the editor.
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
-    <body><header>
+    <body>
+        
+        <header>
             <nav class="navbar navbar-default navbar-static-top" >
 
                 <div class="container">
@@ -49,9 +78,9 @@ and open the template in the editor.
         </header>
         <div class="container well" id ="containerUser">
             <h3 class="text-center">Usuario registrado: <span class="glyphicon glyphicon-user"></span></h3> 
-            <form  class="form-group" >
+            <form  enctype="multipart/form-data" method="post" action="Subir.php" >
 
-                <img src="images/imagen_user.png" class="img-rounded" alt="Cinque Terre" width="304" height="236"> 
+                <img src="images/<?php echo $rutaFoto?>" class="img-rounded" alt="Cinque Terre" width="304" height="236"> 
                 <div class="form-group">
                     <label>Nombre Usuario</label>
 
@@ -64,8 +93,11 @@ and open the template in the editor.
                     <label>Fecha de vinculacion </label>
 
                 </div>
-                <p>Used on a button:</p>
-                <button style="font-size:24px">Button <i class="material-icons">add_a_photo</i></button>
+                <p>Actualizar imagen</p>
+                <!--<button style="font-size:24px">Button <i class="material-icons">add_a_photo</i></button>-->
+                <input type="file" id="img_up" name="img_up">
+                
+                <input value="Actualizar" type="submit">
             </form>
         </div>
         <footer>
@@ -96,3 +128,4 @@ and open the template in the editor.
         </footer>
     </body>
 </html>
+|
