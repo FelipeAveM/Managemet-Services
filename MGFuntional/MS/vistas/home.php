@@ -17,7 +17,7 @@ include_once 'plantillas/navbar.inc.php';
 
 <div class="container">
     <div class="jumbotron">
-        <h2>Management Services</h2>
+        <h2>MANAGEMENT SERVICES</h2>
         <h4> </h4>
     </div>
 </div>
