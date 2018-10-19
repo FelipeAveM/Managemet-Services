@@ -1,0 +1,142 @@
+
+body {
+    background-image: url('../img/men.png');
+}
+.jumbotron{
+    background-color: #347ab6;
+    color: white;
+    border-radius: 0px;
+
+
+}
+.panel-heading{
+ background-color: #347ab6 !important;
+    color:white !important;
+}
+
+
+.panel-body{
+    color: #2b2b2b !important;  
+}
+
+.navbar{
+    background-color: #2b2b2b;
+}
+
+.navbar-brand:link,.navbar-brand:visited{
+    color: #347ab6 !important;
+}
+
+.navbar-brand:hover,.navbar-brand:active{
+    color: white !important;
+}
+
+#navbar li a:link,#navbar li a:visited{
+    color: white !important;
+}
+
+#navbar li a:hover,#navbar li a:active{
+    color: deeppink  !important;
+}
+
+.open > a{
+    background-color: #2b2b2b !important;
+}
+
+.btn-primary {
+    background-color: #f5e79e !important;
+    border:none;
+}
+
+.btn-primary:hover{
+    background-color: #2b2b2b !important; 
+
+}
+.sidebar {
+
+    background-color: white;
+
+}
+
+.sidebar, .gg-elemento{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.gg-elemento:hover{
+
+    background-color: #2b2b2b !important;
+    color:#347ab6;
+}
+
+.gg-elemento{
+    color: white;
+}
+
+
+#gg-solicitudes {
+    background-color: #347ab6;
+}
+#gg-estadisticas {
+    background-color: #029ac4;
+}
+#gg-calificaciones {
+    background-color: #394a66;
+}
+.parte-gestor-entradas {
+    background-color: #347ab6;
+    color:white;
+
+}
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th{
+    background-color: #029ac4;
+}
+.table-striped>tbody>tr>td{
+    border: none;
+}
+.table>thead>tr>th{
+    border: none;
+}
+tbody:before{
+    content: "_";
+    display:block;
+    line-height: 1em;
+    color:transparent;
+
+
+}
+#boton-nueva-entrada {
+    background-color: #029ac4 !important;
+}
+
+#boton-nueva-entrada:hover {
+    
+    background-color: #2b2b2b !important;
+}
+
+
+.form-editar-solicitud {
+    
+    background-color:  white !important;
+    padding:3em;
+}
+
+
+.contenido-articulo, .perfil {
+    background-color: white !important;
+    padding: 2em;
+     
+    
+}
+.boton_subir {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    
+ 
+}
+
